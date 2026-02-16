@@ -1,6 +1,6 @@
 
 const slides = [
-    { img: "images/slide1.jpg", alt: "AR glasses lateral view showing Ray-Ban design", text: "Heat-forged carbon fiber unibody design for exceptional lightness and resistance." },
+    { img: "images/slide1.jpg", alt: "AR glasses lateral view showing design", text: "Heat-forged carbon fiber unibody design for exceptional lightness and resistance." },
     { img: "images/slide2.jpg", alt: "AR glasses interface to real life", text: "Interface to real life" },
     { img: "images/slide3.jpg", alt: "Interface in glasses", text: "Only visible by you" },
     { img: "images/slide4.jpg", alt: "glasses, luxury style", text: "Luxury style" },
