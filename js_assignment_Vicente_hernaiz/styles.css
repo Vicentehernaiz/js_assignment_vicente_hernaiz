@@ -155,15 +155,6 @@ h3 {
     margin: 0 auto;
 }
 
-.carrusel{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
-}
-
 #carouselcontainer {
     display: flex;
     align-items: center;
