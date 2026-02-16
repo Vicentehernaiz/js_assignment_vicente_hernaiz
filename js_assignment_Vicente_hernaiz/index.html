@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumentum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!----- header and navbar -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="index.html" class="navlink">New realities</a>
+            <div class="navlogo">
+                <h1>Aumentum</h1>
+            </div>
+            <a href="index.html" class="navlink">Buy glasses</a>
+        </nav>
+    </header>
+
+    <main>
+        <!----- hero section ----->
+        <section id="hero">
+            <img src="images/hero-bg.jpg" alt="Aumentum AR glasses third person view" class="heroimg">
+            <div class="herogradient"></div>
+            <h2>The new reality</h2>
+            
+        </section>
+
+        <!----- carousel section ----->
+        <section class="carouselsection">
+            <h3 class="carouseltitle">Get the highlights.</h3>
+                    <div id="carouselcontainer">
+                        <div class="caruselSlides" id="slide0">
+                            <img src="images/slide1.jpg" alt="AR glasses lateral view showing Ray-Ban design" class="carouselimg">
+                            <p class="slidetext">Heat-forged carbon fiber unibody design for exceptional lightness and resistance.</p>
+                            <button class="btnexpand"><img src="images/add_2.svg"></button>
+                        </div>
+                        <div class="caruselSlides sideslide" id="slide1"></div>
+                        <div class="caruselSlides sideslide" id="slide2"></div>
+                        <div class="caruselSlides sideslide" id="slide3"></div>
+                    </div>
+
+            <!----- carousel controlers and position ----->
+            <div class="carouselcontrols">
+                <button class="carouselbtn" id="prev-btn" disabled>
+                    <img src="images/arrow.svg" alt="" class="arrowicon-backwards">
+                </button>
+                <div class="carouseldots">
+                    <div class="activedot" id="dot0"></div>
+                    <div class="dot" id="dot1"></div>
+                    <div class="dot" id="dot2"></div>
+                    <div class="dot" id="dot3"></div>
+                </div>
+                <button class="carouselbtn" id="next-btn">
+                    <img src="images/arrow.svg" alt="" class="arrowicon">
+                </button>
+            </div>
+        </section>
+
+        <!--- footer-->
+        <footer id="footer">
+            <div class="footerbody">
+                <div class="footerbrand">
+                    <p class="brandname">Aumentum</p>
+                </div>
+                <div class="footerfeatures">
+                    <p>Forged carbon fiber</p>
+                    <p>AI assistant</p>
+                    <p>Virtual display interface</p>
+                    <p>Voice interface</p>
+                </div>
+                <div class="footerlinks">
+                        <p>Buy Aumentum</p>
+                        <p>Stores</p>
+                        <p>Legal terms</p>
+                        <p>Privacy policies</p>
+                </div>
+            </div>
+            <div class="brandregister">
+                <p >®&nbsp;Aumentum</p>
+                <p >2025</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

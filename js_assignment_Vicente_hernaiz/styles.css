@@ -1,0 +1,506 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191c21;
+    font-family: "Work Sans", Arial, sans-serif;
+    color: #f5f5f7;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+main {
+    width: 100%;
+}
+
+/* ----header ---*/
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 24px 36px 0px 36px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(25, 28, 33, 0.75);
+    border-radius: 16px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: fit-content;
+    backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(10px);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.navlogo {
+    background: black;
+    padding: 24px 0 24px 0%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+h1{
+    font-size: clamp(16px, 1rem + 2vw, 36px);
+    font-weight: 700;
+}
+
+.nav-logo span {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+}
+
+.navlink {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    padding: 24px;
+    flex: 1;
+    text-align: center;
+}
+
+.navlink:hover {
+    color: white;
+}
+
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    max-height: 2500px;
+}
+
+.heroimg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.herogradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 188px;
+    background: linear-gradient(
+        to bottom,
+        rgba(22, 26, 30, 0) 4%,
+        rgba(21, 25, 29, 0.4) 45%,
+        #191c21 95%
+    );
+}
+
+h2 {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(32px, 2rem + 10vw, 200px);
+    font-weight: 600;
+    letter-spacing: -0.28px;
+    line-height: clamp(48px, 2rem + 10vw, 200px);
+    color: white;
+    mix-blend-mode: difference;
+    z-index: 2;
+    text-align: center;
+}
+
+h3 {
+    font-size: clamp(32px, 2rem + 10vw, 150px);
+    font-weight: 600;
+    letter-spacing: -0.28px;
+    line-height: 1.2;
+    color: #f5f5f7;
+    z-index: 900;
+}
+
+.carouseltitle{
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+}
+
+
+/* ---- carrusel ------ */
+
+
+
+.carouselsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 156px;
+    gap: 48px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carrusel{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+#carouselcontainer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.caruselSlides {
+    flex: 0 0 80%;
+    aspect-ratio: 16/9;
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.sideslide {
+    flex: 0 0 80%;
+    aspect-ratio: 16/9;
+    background: black;
+    border-radius: 32px;
+}
+
+.carouselimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slidetext {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    width: 50%;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 0.196px;
+    color: white;
+    mix-blend-mode: difference;
+    z-index: 2;
+}
+
+.btnexpand{
+    height: 64px;
+    width: 64px;
+    border-radius: 100px;
+    background: white;
+    background: blur 40px;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+.carouselimg.fadein {
+    animation: fadeIn 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+    /* I tried in figma dev mode and searched in google before and then i adjust
+    by hand in this code. Also, i didn´t like  the tipical ease-in*/
+}
+
+.slidetext.fadein {
+    animation: fadeIn 0.9s cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s both;
+}
+
+.btnexpand.fadein {
+    animation: fadeIn 0.9s cubic-bezier(0.25, 0.1, 0.25, 1) 0.9s both;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ---- carousel controls. ---  */
+.carouselcontrols {
+    display: flex;
+    gap: 54px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.carouselbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.20);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+}
+
+.carouselbtn:hover {
+    background: rgba(143, 143, 143, 0.4);
+}
+.carouselbtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.arrowicon {
+    width: 12px;
+    height: 20px;
+    aspect-ratio: 11.78/20.00;
+    display: block;
+}
+
+.arrowicon-backwards {
+    transform: rotate(180deg); /* i didn´t wnt to use two svg, so i rotate it */
+    width: 12px;
+    height: 20px;
+    aspect-ratio: 11.78/20.00;
+    display: block;
+}
+
+.carouseldots {
+    display: flex;
+    padding: 24px;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    height: 72px;
+    gap: 24px;
+    border-radius: 45px;
+    background: rgba(0, 0, 0, 0.20);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background: rgba(245, 245, 247, 0.8);
+    transition: 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+}
+
+.activedot {
+    width: 48px;
+    height: 8px;
+    border-radius: 10px;
+    background: white;
+}
+
+
+/* ---footter --  */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #191C21 0%, #04080F 100%);
+    padding: 72px 36px 36px 36px;
+    width: 100%;
+    gap: 32px;
+}
+
+.footerbody {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 48px;
+    padding: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: fit-content;
+    width: 100%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.footerbrand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 300px;
+    width: fit-content;
+}
+
+.brandname {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    width: fit-content;
+}
+
+
+.brandregister {
+    font-size: 14px;
+    font-weight: 100;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    width: fit-content;
+}
+
+.footerfeatures {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    align-self: flex-start;
+    width: fit-content;
+}
+
+footer p {
+    font-size: 32px;
+    font-weight: 200;
+    color: white;
+}
+
+.footerlinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+    height: fit-content;
+    gap: 24px;
+}
+
+.brandregister{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: fit-content;
+    align-content: center;
+}
+
+@media (max-width: 2000px){
+    #hero {
+        max-height: 2000px;
+    }
+    h2{
+        top: 140px;
+        font-size: 160px;
+        line-height: 160px;
+    }
+    h3{
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    h2{
+        top: 160px;
+        font-size: 100px;
+        line-height: 100px;
+    }
+    h3{
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    h1{
+        font-size: 16px;
+
+    }
+    h2{
+        top: 24px;
+        font-size: 36px;
+        line-height: 40px;
+        
+    }
+    h3{
+        font-size: 32px;
+        line-height: 34px;
+        max-width: 350px;
+    }
+    .carruselsection{
+        padding: 0px 24px 0px 24px;
+    }
+
+    #header {
+        padding: 0px 0px 0 0px;
+        position: relative;
+
+    }
+    .footerbrand{
+        height: fit-content;
+        gap: 24px;
+
+    }
+    .navbar {
+        border-radius: 0px
+    }
+
+    .navlink {
+        font-size: 12px;
+        padding: 12px 8px;
+        width: auto;
+        flex: 1;
+        text-align: center;
+    }
+
+    .navlogo {
+        padding: 12px 0;
+        flex: 1;
+    }
+
+
+    .footerbody {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap:24px;
+    }
+    .footerlinks{
+        gap:24px;
+        height: fit-content;
+    }
+    footer{
+        padding: 0px 16px;
+    }
+    footer p {
+        font-size: 16px;
+        font-weight: 200;
+        color: white;
+    }
+    .brandname {
+    font-size: 32px;
+    font-weight: 100;
+    }
+}
+
+
